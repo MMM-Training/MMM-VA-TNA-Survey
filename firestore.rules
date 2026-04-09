@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (request.auth.token.email.lower() == "fenida@mymountainmover.com" && request.auth.token.email_verified == true);
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[^@]+@[^@]+\\.[^@]+$");
+    }
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['email', 'role']) &&
+             isValidEmail(data.email) &&
+             data.role in ['admin', 'responder'];
+    }
+
+    function isValidResponse(data) {
+      return data.keys().hasAll(['full_name', 'email', 'role', 'submitted_at', 'user_type', 'practice_type', 'va_count', 'sections']) &&
+             data.full_name is string && data.full_name.size() > 0 &&
+             isValidEmail(data.email) &&
+             data.role is string &&
+             data.user_type is string &&
+             data.practice_type is string &&
+             data.va_count is string &&
+             data.sections is map &&
+             (data.submitted_at is timestamp || data.submitted_at == request.time);
+    }
+
+    match /test/connection {
+      allow read: if true;
+    }
+
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      allow create: if isAuthenticated() && (request.auth.uid == userId) && isValidUser(request.resource.data) && request.resource.data.role == 'responder';
+      allow update: if isAdmin() && isValidUser(request.resource.data);
+      allow delete: if isAdmin();
+    }
+
+    match /responses/{responseId} {
+      // Only admins can read all responses
+      allow read: if isAdmin();
+      
+      // Anyone can create a response (public survey)
+      allow create: if isAdmin() || isValidResponse(request.resource.data);
+      
+      // Only admins can update or delete
+      allow update, delete: if isAdmin();
+    }
+  }
+}
