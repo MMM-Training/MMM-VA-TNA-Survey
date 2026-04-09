@@ -536,10 +536,7 @@ function SurveyApp() {
             </div>
             <h1 className="text-3xl font-bold text-slate-900">Thank you for your feedback!</h1>
             <p className="text-slate-600 text-lg leading-relaxed">
-              Your input helps us tailor the VA Upskilling Program to strengthen the skills that matter most for your team, so your VAs can perform at their best and drive real impact.
-            </p>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              We’ll keep you posted when the program launches. Your VAs are now set to excel and make your team even stronger!
+              Your input helps us shape the VA Upskilling Program to focus on the skills that matter most for your team.
             </p>
           </div>
           <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center">
@@ -704,7 +701,7 @@ function SurveyApp() {
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                       ) : (
                         <>
-                          {currentStepIndex === steps.length - 1 ? "Submit Survey" : "Continue"}
+                          {currentStepIndex === steps.length - 1 ? "Submit" : "Continue"}
                           <ChevronRight className="w-5 h-5" />
                         </>
                       )}

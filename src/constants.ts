@@ -245,16 +245,16 @@ const getMedicalReceptionistSections = (): Section[] => {
     },
     {
       id: `${role}-training-needs`,
-      title: "Part III - Training Needs",
+      title: "Part III – Competencies / Skills",
       description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Medical Receptionist – Core Skills",
+          label: "Core Skills",
           options: [
             "Professional Call Handling & Patient Communication",
-            "Appointment scheduling & Calendar Management",
+            "Appointment Scheduling & Calendar Management",
             "Managing Cancellations, No-Shows & Same-Day Changes",
             "Patient Intake & Accurate Data Entry",
             "Medical Records Handling & HIPAA Compliance",
@@ -265,7 +265,7 @@ const getMedicalReceptionistSections = (): Section[] => {
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Medical Receptionist – Specialized Skills",
+          label: "Specialized Skills",
           options: [
             "Insurance Verification (Eligibility & Benefits Breakdown)",
             "Patient Financial Communication (Copay, Deductible, OOP Costs)",
@@ -410,34 +410,36 @@ const getMedicalAdminSections = (): Section[] => {
     },
     {
       id: `${role}-training-needs`,
-      title: "Part III - Training Needs",
+      title: "Part III – Competencies / Skills",
       description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Medical Admin – Core Skills",
+          label: "Core Skills",
           options: [
-            "Medical Terminology & Practice Workflows",
-            "Appointment Scheduling & Calendar Management",
-            "Basic Insurance Verification & Eligibility",
-            "Patient Communication & Customer Service",
-            "Medical Records Management & HIPAA",
-            "EMR/EHR Navigation & Data Entry"
+            "Inbox & Email Management (Prioritization, Routing, Follow-Ups)",
+            "Calendar Management & Provider Coordination",
+            "Document Handling & File Organization (Accuracy & Compliance)",
+            "Task Management & Follow-Up Tracking",
+            "Professional Written & Internal Communication",
+            "Meeting Coordination & Basic Minutes Documentation"
           ],
           required: true,
         },
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Medical Admin – Specialized Skills",
+          label: "Specialized Skills",
           options: [
-            "Advanced Prior Authorizations & Referrals",
-            "Detailed Benefits Breakdown & COB Basics",
-            "Care Coordination & Patient Engagement Strategies",
-            "Practice Inbox & Task Management Optimization",
-            "Medical Billing Basics for Admin Staff",
-            "Workflow Optimization & Process Improvement"
+            "Insurance Verification & Benefits Review (Admin-Level Support)",
+            "Prior Authorizations (Submission, Tracking & Follow-Up)",
+            "Medical Records Requests (ROI) & Documentation Processing",
+            "Referral Coordination & Specialist Scheduling",
+            "Basic Billing Support (Copays, Statements, Patient Inquiries)",
+            "Form Processing (FMLA, Disability, Medical Forms)",
+            "EMR/EHR Navigation & Workflow Management",
+            "Supporting Provider Workflow (Pre-visit Prep & Task Queues)"
           ],
           required: true,
         },
@@ -536,15 +538,17 @@ const getMedicalBillerSections = (): Section[] => {
           type: "grid",
           label: "How easy or difficult is it for you to complete the following tasks in your role?",
           rows: [
-            "Charge Entry, Coding & Pre-Billing Review → Entering CPT, ICD-10, modifiers; validating documentation and scrubbing claims before submission",
-            "Insurance Verification (Billing-Focused) → Validating coverage, payer requirements, and eligibility before billing",
-            "Claim Creation, Submission & Rejection Handling → Submitting claims (CMS 1500 / UB-04) and correcting clearinghouse rejections",
+            "Charge Entry & Coding Accuracy → Entering CPT, ICD-10, modifiers; ensuring documentation supports billed services",
+            "Insurance Verification (Billing-Focused) → Validating coverage, payer requirements, and billing-related eligibility before claim submission",
+            "Pre-Billing Review / Claim Scrubbing → Reviewing claims for errors (coding, demographics, modifiers) prior to submission",
+            "Claim Creation & Submission → Submitting claims via clearinghouse (CMS 1500 / UB-04)",
+            "Clearinghouse Rejection Handling → Correcting and resubmitting claims that failed at the clearinghouse level",
             "Payer Portal Navigation & Claim Tracking → Monitoring claim status via Availity and payer portals",
-            "Payment Posting & Reconciliation → Posting EOB/ERA and identifying underpayments",
-            "Denial Management, Appeals & AR Follow-Up → Resolving denials, submitting appeals, and following up on unpaid claims",
-            "Aging & Work Queue Management → Prioritizing claims based on aging buckets (30/60/90+)",
-            "Patient Billing & Financial Communication → Managing statements, explaining balances, OOP costs, and payment options",
-            "Billing Reports, Compliance & Process Improvement → Tracking KPIs, ensuring HIPAA compliance, and optimizing workflows"
+            "Payment Posting & Reconciliation → Posting EOB/ERA payments and identifying underpayments",
+            "Denial Management & Appeals → Resolving denials and submitting formal appeals",
+            "AR Follow-Up & Aging Management → Following up on unpaid claims and managing aging buckets (30/60/90+)",
+            "Patient Billing & Financial Communication → Managing statements, explaining balances, and OOP costs",
+            "Billing Reports & KPI Tracking → Tracking collection rates, denial trends, and financial performance"
           ],
           columns: TASK_WORKFLOW_COLUMNS,
           required: true,
@@ -554,14 +558,17 @@ const getMedicalBillerSections = (): Section[] => {
           type: "checkbox",
           label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
           options: [
-            "Claim Submission Accuracy & Volume → Clean claims, minimal rejections, timely submission",
-            "Denial Management & Resolution → Reducing denials and recovering lost revenue",
-            "Accounts Receivable (AR) Follow-Up → Driving collections and reducing aging",
-            "Payment Posting Accuracy → Ensuring correct revenue tracking and reconciliation",
-            "Clearinghouse Rejection Management → Preventing delays before claims reach payer",
-            "Insurance Verification (Billing Impact) → Preventing eligibility-related denials",
-            "Patient Billing & Collections → Improving patient payments and reducing outstanding balances",
-            "Reporting & Revenue Insights → Identifying trends and improving financial performance",
+            "Charge Entry & Coding Accuracy",
+            "Insurance Verification (Billing-Focused)",
+            "Pre-Billing Review / Claim Scrubbing",
+            "Claim Creation & Submission",
+            "Clearinghouse Rejection Handling",
+            "Payer Portal Navigation & Claim Tracking",
+            "Payment Posting & Reconciliation",
+            "Denial Management & Appeals",
+            "AR Follow-Up & Aging Management",
+            "Patient Billing & Financial Communication",
+            "Billing Reports & KPI Tracking",
             "Other"
           ],
           optionsWithInputs: ["Other"],
@@ -572,13 +579,13 @@ const getMedicalBillerSections = (): Section[] => {
     },
     {
       id: `${role}-training-needs`,
-      title: "Part III - Training Needs",
+      title: "Part III – Competencies / Skills",
       description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Medical Biller – Core Skills",
+          label: "Core Skills",
           options: [
             "Charge Entry Accuracy & Documentation Review",
             "Medical Coding Basics (CPT, ICD-10, Modifiers)",
@@ -593,7 +600,7 @@ const getMedicalBillerSections = (): Section[] => {
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Medical Biller – Specialized Skills",
+          label: "Specialized Skills",
           options: [
             "Advanced Denial Management & Appeals Process",
             "AR Recovery Strategies (Reducing 60–90+ Day AR)",
@@ -737,34 +744,33 @@ const getMedicalScribeSections = (): Section[] => {
     },
     {
       id: `${role}-training-needs`,
-      title: "Part III - Training Needs",
+      title: "Part III – Competencies / Skills",
       description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Medical Scribe – Core Skills",
+          label: "Core Skills",
           options: [
-            "Medical Terminology & Anatomy Basics",
-            "HPI & ROS Documentation Standards",
-            "Physical Exam & Assessment/Plan Recording",
-            "Live Scribing Speed & Accuracy Techniques",
-            "EMR/EHR Navigation & Template Usage",
-            "HIPAA Compliance & Documentation Integrity"
+            "Live Scribing & Real-Time Documentation Accuracy",
+            "Medical Terminology & Clinical Abbreviations",
+            "Charting Structure & Note Completion (HPI, ROS, PE, A&P)",
+            "Pre-Charting & Post-Visit Documentation Workflow",
+            "EMR/EHR Navigation & Templates",
+            "Provider Communication & Workflow Support"
           ],
           required: true,
         },
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Medical Scribe – Specialized Skills",
+          label: "Specialized Skills",
           options: [
-            "Specialty-Specific Scribing (e.g., Cardio, Ortho, Derm)",
-            "Advanced Medical Decision Making (MDM) Capture",
-            "ICD-10 & CPT Coding Support for Scribes",
-            "Pre-Charting & Workflow Optimization",
-            "Order Entry & Clinical Decision Support Tools",
-            "Quality Assurance & Chart Audit Readiness"
+            "Advanced Chart Review & Clinical Data Extraction",
+            "Order Entry Support (Labs, Imaging, Prescriptions)",
+            "Care Coordination & Task/Follow-Up Management",
+            "Documentation Compliance & Legal Accuracy (HIPAA)",
+            "Specialty-Specific Scribing (e.g., Primary Care, Cardiology, Ortho)"
           ],
           required: true,
         },
@@ -896,34 +902,33 @@ const getHealthEducatorSections = (): Section[] => {
     },
     {
       id: `${role}-training-needs`,
-      title: "Part III - Training Needs",
+      title: "Part III – Competencies / Skills",
       description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Health Educator – Core Skills",
+          label: "Core Skills",
           options: [
-            "Patient Education Delivery & Communication",
-            "Health Coaching Fundamentals & Goal Setting",
-            "Motivational Interviewing & Engagement Techniques",
-            "Care Plan Reinforcement & Simplification",
-            "Documentation Standards & EMR/CRM Usage",
-            "HIPAA Compliance & Scope of Practice"
+            "Patient Education & Health Coaching Communication",
+            "Lifestyle Coaching (Nutrition, Sleep, Exercise)",
+            "Care Plan Support, Goal Setting & Progress Tracking",
+            "Patient Engagement & Follow-Up Communication",
+            "Documentation & EMR/EHR Updates",
+            "Program Coordination & Scheduling"
           ],
           required: true,
         },
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Health Educator – Specialized Skills",
+          label: "Specialized Skills",
           options: [
-            "Advanced Behavior Change Models & Strategies",
-            "Chronic Disease Management Education (e.g., Diabetes, Hypertension)",
-            "Risk Identification & Clinical Escalation Protocols",
-            "Patient Retention & Adherence Strategies",
-            "Data Tracking & Outcome Analysis for Health Programs",
-            "Workflow Optimization & Patient Flow Management"
+            "Behavior Change Techniques & Motivational Interviewing",
+            "Chronic Condition Education (e.g., Diabetes, Hypertension)",
+            "Personalized Care Planning & Risk Stratification",
+            "Patient Compliance Monitoring & Outcome Tracking",
+            "Health Program Delivery & Resource Coordination"
           ],
           required: true,
         },
@@ -1052,34 +1057,33 @@ const getDentalReceptionistSections = (): Section[] => {
     },
     {
       id: `${role}-training-needs`,
-      title: "Part III - Training Needs",
+      title: "Part III – Competencies / Skills",
       description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Dental Receptionist – Core Skills",
+          label: "Core Skills",
           options: [
-            "Dental Terminology & Procedure Knowledge",
+            "Call Handling & Patient Communication",
             "Appointment Scheduling & Calendar Management",
-            "Basic Insurance Verification & Eligibility",
-            "Patient Communication & Customer Service",
-            "Recall & Hygiene Schedule Management",
-            "EMR/PMS Navigation (Dentrix, Eaglesoft, etc.)"
+            "Managing Cancellations, No-Shows & Same-Day Changes",
+            "Patient Intake & Chart Review",
+            "Dental Records Handling & Documentation Accuracy",
+            "Internal Communication & Treatment Coordination"
           ],
           required: true,
         },
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Dental Receptionist – Specialized Skills",
+          label: "Specialized Skills",
           options: [
-            "Advanced Calendar Optimization & Production Planning",
-            "Treatment Coordination & Case Acceptance Strategies",
-            "Detailed Benefits Breakdown & Insurance Coordination",
-            "Patient Financial Conversations & Payment Plans",
-            "No-Show Recovery & Schedule Gap Management",
-            "Dental Billing Basics for Front Desk"
+            "Dental Insurance Verification (PPO, Frequencies, Limitations)",
+            "Treatment Estimates & Patient Financial Communication (OOP, Copay)",
+            "Pre-Authorizations & Referral Coordination",
+            "Dental EMR Navigation (Dentrix/Eaglesoft) & Workflow Efficiency",
+            "Handling Billing Inquiries & Front Desk Support in Dental RCM"
           ],
           required: true,
         },
@@ -1348,47 +1352,34 @@ const getGeneralBusinessVASections = (): Section[] => {
     },
     {
       id: `${role}-competencies`,
-      title: "Part III - Competencies / Skills",
-      description: "Which skills or topics would help you perform your role more effectively if you received additional training?\n(Select the areas where you feel additional support or learning would help you the most.)",
+      title: "Part III – Competencies / Skills",
+      description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "General Business VA – Core Skills (Day-to-day execution across admin, sales support, and operations)",
+          label: "Core Skills",
           options: [
-            "Email & Inbox Management (Organizing, responding, prioritizing)",
-            "Calendar Management & Scheduling",
-            "Data Entry & Record Management (CRM, spreadsheets, databases)",
-            "Customer Support (Email, chat, basic inquiries)",
-            "Basic CRM Management (Updating leads, contacts, deal stages)",
-            "Lead Research (Basic prospecting and data gathering)",
-            "Task Tracking & Follow-Up Management",
-            "Document Management & File Organization",
-            "Basic Social Media Posting & Scheduling",
+            "Lead Generation, Research & Data Entry",
+            "CRM Management & Pipeline Tracking",
+            "Customer Communication (Email, Chat, Basic Calls)",
+            "Administrative Support & Task Coordination",
             "Order Processing & Basic Operations Support",
-            "Communication Skills (Written & Verbal Professionalism)"
+            "Professional Written Communication"
           ],
           required: false,
         },
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "General Business VA – Specialized Skills (Advanced) (Higher-level execution, ownership, and business growth support)",
+          label: "Specialized Skills",
           options: [
-            "Lead Generation & Outreach (Cold email, LinkedIn, prospecting strategies)",
-            "Sales Pipeline Management & Conversion Tracking (Managing deals, follow-ups, and improving conversion rates)",
-            "Advanced CRM Management & Automation (Workflows, tagging, segmentation, reporting)",
-            "Marketing Campaign Support (Email marketing, content coordination: Campaign setup, tracking, and optimization)",
-            "Social Media Management & Engagement Strategy (Content planning, engagement, and analytics)",
-            "Customer Success & Retention Support (Managing client relationships, onboarding, and follow-ups)",
-            "Operations & Logistics Coordination (Vendor coordination, order tracking, process management)",
-            "Reporting & Data Analysis (Interpreting metrics and generating insights)",
-            "Process Improvement & Workflow Optimization (Identifying inefficiencies and improving systems)",
-            "Project Coordination & Management Support (Managing timelines, deliverables, and cross-team coordination)",
-            "Advanced Communication & Client Handling (Handling escalations, negotiations, and complex interactions)",
-            "Other"
+            "Outbound Outreach & Sales Follow-Ups (Email, Calls, LinkedIn)",
+            "Marketing Support (Social Media, Email Campaigns, Content Coordination)",
+            "Logistics, Inventory & Vendor Coordination",
+            "Basic Analytics & Performance Tracking",
+            "Reporting, Documentation & Workflow Optimization"
           ],
-          optionsWithInputs: ["Other"],
           required: false,
         },
       ],
@@ -1594,47 +1585,34 @@ const getExecutiveAssistantVASections = (): Section[] => {
     },
     {
       id: `${role}-competencies`,
-      title: "Part III - Competencies / Skills",
-      description: "Which skills or topics would help you perform your role more effectively if you received additional training?\n(Select the areas where you feel additional support or learning would help you the most.)",
+      title: "Part III – Competencies / Skills",
+      description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
       questions: [
         {
           id: "competencies_skills",
           type: "checkbox",
-          label: "Executive Assistant – Core Skills (Day-to-day administrative execution and executive support)",
+          label: "Core Skills",
           options: [
-            "Calendar Management & Scheduling (Meetings, appointments, priorities)",
-            "Email & Inbox Management (Organizing, prioritizing, drafting replies)",
-            "Basic Client & Stakeholder Communication",
-            "Meeting Coordination (Scheduling, confirmations, logistics)",
-            "Task Tracking & Follow-Up Management",
-            "Data Entry & Record Management",
-            "Document Management (Files, folders, organization)",
-            "Basic Report Preparation (Simple summaries, trackers)",
-            "Note-Taking & Meeting Minutes",
-            "Time Management & Organization Skills",
-            "Communication Skills (Written & Verbal Professionalism)"
+            "Inbox & Email Management (Prioritization, Drafting, Follow-Ups)",
+            "Calendar Management & Scheduling Coordination",
+            "Task Management & Executive Support Workflow",
+            "Professional Written Communication & Stakeholder Coordination",
+            "Document Creation, File Management & Organization",
+            "Meeting Coordination & Minutes Documentation"
           ],
           required: false,
         },
         {
           id: "specialized_skills",
           type: "checkbox",
-          label: "Executive Assistant – Specialized Skills (Advanced) (Higher-level executive support, coordination, and decision-enabling tasks)",
+          label: "Specialized Skills",
           options: [
-            "Advanced Calendar & Priority Management (Managing competing priorities, high-level scheduling, time blocking)",
-            "Inbox Optimization & Communication Ownership (Drafting on behalf of executive, filtering priorities, handling sensitive communication)",
-            "Executive Briefing & Decision Support (Preparing summaries, insights, and key updates for decision-making)",
-            "Project Coordination & Management Support (Managing timelines, stakeholders, and deliverables)",
-            "Cross-Functional Coordination (Working across teams to ensure alignment and execution)",
-            "Advanced Reporting & Data Analysis (Creating reports, dashboards, and interpreting key metrics)",
-            "Research & Information Synthesis (Gathering and summarizing information for strategic use)",
-            "Travel & Event Planning (End-to-End Coordination: Managing logistics, itineraries, and contingencies)",
-            "Process Improvement & Workflow Optimization (Identifying inefficiencies and improving systems/processes)",
-            "Confidentiality & Executive-Level Discretion (Handling sensitive information professionally)",
-            "Stakeholder Management (Communicating with clients, partners, and leadership effectively)",
-            "Other"
+            "Travel Planning & Itinerary Management",
+            "Research, Data Gathering & Executive Brief Preparation",
+            "Presentation & Report Preparation (Slides, Summaries)",
+            "Project Coordination & Cross-Functional Support",
+            "CRM & Business Tools Management (as applicable)"
           ],
-          optionsWithInputs: ["Other"],
           required: false,
         },
       ],
@@ -2112,7 +2090,7 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         type: "radio",
         label: "How long have you been working with your current client?",
         options: [
-          "No prior healthcare experience",
+          "Not Applicable / Current BCT Trainee",
           "Less than 3 months",
           "3–6 months",
           "6–12 months",
@@ -2148,34 +2126,26 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
           {
             id: "biller_task_difficulty",
             type: "grid",
-            label: "Please rate your VA’s proficiency in the following areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Charge Entry & Coding Accuracy → Entering CPT, ICD-10, modifiers; ensuring documentation supports billed services",
-              "Insurance Verification (Billing-Focused) → Validating coverage, payer requirements, and billing-related eligibility before claim submission",
-              "Pre-Billing Review / Claim Scrubbing → Reviewing claims for errors (coding, demographics, modifiers) prior to submission",
-              "Claim Creation & Submission → Submitting claims via clearinghouse (CMS 1500 / UB-04)",
-              "Clearinghouse Rejection Handling → Identifying and correcting rejected claims before they reach the payer",
-              "Payer Portal Navigation & Claim Tracking → Checking claim status via portals (e.g., Availity, payer sites)",
-              "Payment Posting (EOB/ERA) → Accurately posting insurance and patient payments",
-              "Payment Reconciliation → Comparing expected vs. actual reimbursement; identifying underpayments",
-              "Denial Management & Resolution → Analyzing denial reasons and correcting/resubmitting claims",
-              "Appeals & Reconsiderations → Preparing and submitting appeals with proper documentation",
-              "Accounts Receivable (AR) Follow-Up → Following up on unpaid, delayed, or partially paid claims",
-              "Aging & Work Queue Management → Prioritizing claims based on aging buckets (30/60/90+ days)",
-              "Patient Billing & Statements → Generating patient statements and managing balances",
-              "Patient Financial Communication → Explaining balances, OOP costs, and payment options",
-              "Billing Reports & KPI Tracking → Monitoring collections, denial trends, AR aging, clean claim rate",
-              "Audit & Compliance Review → Ensuring HIPAA compliance and billing accuracy",
-              "Workflow Optimization & Issue Escalation → Identifying recurring issues and improving billing processes"
+              "Charge Entry, Coding & Pre-Billing Review → Entering CPT, ICD-10, modifiers; validating documentation and scrubbing claims before submission",
+              "Insurance Verification (Billing-Focused) → Validating coverage, payer requirements, and eligibility before billing",
+              "Claim Creation, Submission & Rejection Handling → Submitting claims (CMS 1500 / UB-04) and correcting clearinghouse rejections",
+              "Payer Portal Navigation & Claim Tracking → Monitoring claim status via Availity and payer portals",
+              "Payment Posting & Reconciliation → Posting EOB/ERA and identifying underpayments",
+              "Denial Management, Appeals & AR Follow-Up → Resolving denials, submitting appeals, and following up on unpaid claims",
+              "Aging & Work Queue Management → Prioritizing claims based on aging buckets (30/60/90+)",
+              "Patient Billing & Financial Communication → Managing statements, explaining balances, OOP costs, and payment options",
+              "Billing Reports, Compliance & Process Improvement → Tracking KPIs, ensuring HIPAA compliance, and optimizing workflows"
             ],
             columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "biller_crucial_tasks",
+            id: "biller_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your Medical Biller? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
               "Claim Submission Accuracy & Volume → Clean claims, minimal rejections, timely submission",
               "Denial Management & Resolution → Reducing denials and recovering lost revenue",
@@ -2184,8 +2154,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Clearinghouse Rejection Management → Preventing delays before claims reach payer",
               "Insurance Verification (Billing Impact) → Preventing eligibility-related denials",
               "Patient Billing & Collections → Improving patient payments and reducing outstanding balances",
-              "Reporting & Revenue Insights → Identifying trends and improving financial performance"
+              "Reporting & Revenue Insights → Identifying trends and improving financial performance",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -2299,51 +2271,38 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       },
       {
         id: "biller-competencies-skills",
-        title: "Part III - Competencies / Skills",
-        description: "Please rate your VA’s proficiency in the following areas:",
+        title: "Part III – Competencies / Skills",
+        description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "biller_core_skills_proficiency",
-            type: "grid",
+            id: "competencies_skills",
+            type: "checkbox",
             label: "Core Skills",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
-            rows: [
-              "Charge Entry (Accurate input of CPT, ICD-10, modifiers)",
-              "Claim Creation & Submission (CMS 1500 / UB-04 basics)",
-              "Insurance Eligibility Verification (Billing-related checks)",
-              "Payment Posting (EOB/ERA interpretation and entry)",
-              "Basic Denial Handling (Identifying common denial reasons)",
-              "Claims Status Follow-up (Payer portals, calls)",
-              "EMR & Billing System Navigation",
-              "Understanding of Payer Types (Medicare, Medicaid, Commercial)",
-              "Basic Accounts Receivable (AR) Follow-up (Aging review, simple follow-ups)",
-              "Documentation Review for Billing Accuracy"
+            options: [
+              "Charge Entry Accuracy & Documentation Review",
+              "Medical Coding Basics (CPT, ICD-10, Modifiers)",
+              "Medical Terminology for Billing & Coding Accuracy",
+              "Claim Submission & Clearinghouse Workflow",
+              "Payment Posting (EOB/ERA Interpretation)",
+              "AR Follow-Up Fundamentals (Aging Buckets & Prioritization)",
+              "Denial Identification & Basic Resolution"
             ],
-            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "biller_advanced_skills_proficiency",
-            type: "grid",
-            label: "Specialized Skills (Advanced)",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
-            rows: [
-              "End-to-End Revenue Cycle Management (Charge → Payment → AR Resolution)",
-              "Advanced Coding Knowledge (CPT, ICD-10, Modifiers, Compliance)",
-              "Denial Management & Appeals (Root cause analysis, resubmission strategies)",
-              "Clearinghouse Rejection Management (Edits, resubmissions, error resolution)",
-              "Advanced AR Management (Aging analysis, prioritization, recovery strategies)",
-              "Payment Reconciliation & Variance Analysis (Expected vs actual reimbursement)",
-              "Prior Authorizations & Medical Necessity Validation",
-              "Payer-Specific Guidelines & Portal Navigation (Availity, etc.)",
-              "Patient Billing & Financial Communication (Statements, OOP discussions)",
-              "Audit & Compliance (HIPAA, documentation standards, billing accuracy checks)",
-              "Reporting & KPI Tracking (Collection rates, denial trends, AR metrics)",
-              "Process Improvement & Workflow Optimization (Reducing denials, improving clean claims rate)",
-              "Other"
+            id: "specialized_skills",
+            type: "checkbox",
+            label: "Specialized Skills",
+            options: [
+              "Advanced Denial Management & Appeals Process",
+              "AR Recovery Strategies (Reducing 60–90+ Day AR)",
+              "Insurance Verification for Billing Accuracy",
+              "Prior Authorizations & Medical Necessity Checks",
+              "Patient Billing & Financial Communication",
+              "Payer-Specific Workflows (Medicare, Medicaid, Commercial)",
+              "EMR/PM & Clearinghouse Navigation (End-to-End Billing Flow)",
+              "Reporting & KPI Tracking (Collections, Denial Trends, AR Analysis)"
             ],
-            optionsWithInputs: ["Other"],
-            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           }
         ]
@@ -2353,10 +2312,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "biller_comm_proficiency",
+            id: "biller_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -2387,53 +2346,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "biller_ai_automation_level",
+            id: "biller_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "biller_ai_tool_proficiency",
+            id: "biller_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "biller_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "biller_ai_future_support",
+            id: "biller_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "biller_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -2465,7 +2431,7 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "receptionist_crucial_tasks",
+            id: "receptionist_time_consuming_tasks",
             type: "checkbox",
             label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
@@ -2479,8 +2445,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Payment collection → Processing patient payments",
               "Referral coordination → Managing referrals",
               "Medical records handling → Processing records requests",
-              "Team coordination → Communicating with staff"
+              "Team coordination → Communicating with staff",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -2594,43 +2562,34 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       },
       {
         id: "receptionist-competencies-skills",
-        title: "Part III - Competencies / Skills",
+        title: "Part III – Competencies / Skills",
         description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "receptionist_core_skills_training",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "Medical Receptionist – Core Skills (Day-to-day front desk and communication tasks)",
+            label: "Core Skills",
             options: [
+              "Professional Call Handling & Patient Communication",
               "Appointment Scheduling & Calendar Management",
-              "Patient Call Handling (Inbound & Outbound)",
-              "Patient Intake & Registration",
-              "Insurance Verification (Basic Eligibility Checks)",
-              "Patient Follow-ups & Recall Management",
-              "Communication & Patient Interaction (Phone & Email)",
-              "EMR Navigation (Basic Use)",
-              "Appointment Confirmation & Reminders",
-              "Basic Billing Support (Copays, Basic Inquiries)"
+              "Managing Cancellations, No-Shows & Same-Day Changes",
+              "Patient Intake & Accurate Data Entry",
+              "Medical Records Handling & HIPAA Compliance",
+              "Internal Communication & Task Coordination"
             ],
             required: true,
           },
           {
-            id: "receptionist_advanced_skills_training",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "Medical Receptionist – Specialized Skills (Advanced) (Higher-level tasks requiring deeper workflow and system knowledge)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Scheduling (Multi-provider, Time Blocking, Priority Cases)",
-              "Detailed Insurance Verification & Benefits Breakdown",
-              "Referral Coordination & Tracking",
-              "Patient Financial Communication (OOP, Estimates, Payment Plans)",
-              "Handling Complex Calls (Complaints, Escalations, Difficult Patients)",
-              "EMR Workflow Optimization & Task Management",
-              "Medical Records Management (ROI, Documentation Handling)",
-              "Coordination with Providers & Clinical Teams",
-              "Workflow Efficiency & Process Improvement",
-              "Other"
+              "Insurance Verification (Eligibility & Benefits Breakdown)",
+              "Patient Financial Communication (Copay, Deductible, OOP Costs)",
+              "Pre-Authorizations & Referral Coordination",
+              "EMR/EHR Navigation & Workflow Efficiency",
+              "Handling Billing Inquiries & Front Desk Support in RCM"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           }
         ]
@@ -2674,53 +2633,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "receptionist_ai_automation_level",
+            id: "receptionist_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "receptionist_ai_tool_proficiency",
+            id: "receptionist_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "receptionist_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "receptionist_ai_future_support",
+            id: "receptionist_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "receptionist_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -2881,49 +2847,37 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       },
       {
         id: "admin-competencies-skills",
-        title: "Part III - Competencies / Skills",
+        title: "Part III – Competencies / Skills",
         description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "admin_core_skills_training",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "Medical Admin Assistant – Core Skills (Day-to-day administrative and coordination tasks)",
+            label: "Core Skills",
             options: [
-              "Appointment Scheduling & Calendar Coordination (Providers & Internal Meetings)",
-              "Email & Inbox Management (Patient & Internal Communication)",
-              "Patient Intake & Data Entry (Demographics, Insurance, Documentation)",
-              "Basic Insurance Verification (Eligibility & Coverage Check)",
-              "Patient Communication (Email, Portal, Basic Phone Handling)",
-              "EMR Navigation (Patient Records, Task Management, Documentation Review)",
-              "Document Management (Uploading, Labeling, Organizing Files)",
-              "Task & Workflow Coordination (Daily Task Tracking, Follow-ups)",
-              "Basic Billing Support (Copay Collection Support, Basic Inquiries)",
-              "Internal Coordination (Working with Providers, Clinical Staff, and Teams)"
+              "Inbox & Email Management (Prioritization & Response)",
+              "Advanced Calendar & Provider Coordination",
+              "Patient Intake & Accurate Data Entry",
+              "Medical Records Handling & HIPAA Compliance",
+              "Internal Communication & Task Coordination",
+              "Managing Cancellations, No-Shows & Same-Day Changes"
             ],
             required: true,
           },
           {
-            id: "admin_advanced_skills_training",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "Medical Admin Assistant – Specialized Skills (Advanced) (Higher-level administrative, coordination, and workflow ownership tasks)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Calendar & Provider Coordination (Multi-provider, Conflict Resolution, Priority Scheduling)",
-              "Prior Authorizations & Insurance Coordination (Submission, Follow-ups, Status Tracking)",
-              "Referral Management & Coordination (Specialists, Imaging, Labs)",
-              "Patient Financial Communication (OOP Costs, Estimates, Payment Plans)",
-              "Medical Records Management (ROI, Compliance, Request Processing)",
-              "Advanced EMR Workflow Management (Task Automation, Alerts, Queue Management)",
-              "Executive Assistant Support (Provider Support, Reporting, Meeting Coordination)",
-              "Data Reporting & Tracking (Productivity, Patient Flow, Task Metrics)",
-              "Handling Complex Patient & Client Communication (Escalations, Sensitive Cases)",
-              "Process Improvement & Workflow Optimization (Identifying Gaps, Efficiency Enhancements)",
-              "Care Coordination Support (Labs, Imaging Orders, Prescription Follow-ups)",
-              "Other"
+              "Insurance Verification (Eligibility & Benefits Breakdown)",
+              "Patient Financial Communication (Copay, Deductible, OOP Costs)",
+              "Pre-Authorizations & Referral Coordination",
+              "EMR/EHR Navigation & Workflow Efficiency",
+              "Handling Billing Inquiries & Front Desk Support in RCM"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           }
-        ],
+        ]
       },
       {
         id: "admin-communication-skills",
@@ -2946,29 +2900,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "admin_task_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for you to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "admin_verbal_comm_importance",
+            id: "admin_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for you to perform effectively in your role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – You must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -2979,53 +2918,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "admin_ai_automation_level",
+            id: "admin_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "admin_ai_tool_proficiency",
+            id: "admin_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "admin_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "admin_ai_future_support",
+            id: "admin_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "admin_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -3037,35 +2983,27 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "PART II - Tasks and Workflow",
         questions: [
           {
-            id: "scribe_proficiency_grid",
+            id: "scribe_task_difficulty",
             type: "grid",
-            label: "Please rate your VA’s proficiency in the following areas:",
-            description: "1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Pre-Charting / Chart Preparation → Reviewing patient history, previous notes, medications, and reason for visit",
-              "Chart Organization & Template Setup → Preparing note templates and ensuring accurate patient context before encounter",
-              "Real-Time Documentation (Live Scribing) → Accurately documenting provider-patient interaction during the visit",
-              "Medical Transcription (Audio-to-Text Documentation) → Converting recorded dictations or audio files into structured clinical notes",
-              "Capturing HPI, ROS, PE, and Assessment & Plan → Structuring notes based on provider flow and clinical standards",
-              "Medical Terminology & Abbreviation Accuracy → Correct use of clinical language, abbreviations, and formatting",
-              "Active Listening & Information Filtering → Identifying relevant vs non-relevant details during encounters or recordings",
-              "Chart Completion & Finalization → Completing and organizing notes for provider review/sign-off",
-              "Editing & Proofreading Clinical Notes → Ensuring accuracy, clarity, and completeness of documentation",
-              "Turnaround Time (TAT) Management → Completing notes and transcriptions within required timelines",
-              "Order Entry Support (Labs, Imaging, Prescriptions) → Assisting with placing or preparing orders as directed by provider",
-              "Task & Alert Management in EMR → Managing provider inbox tasks, alerts, and follow-ups",
-              "Care Coordination Support → Communicating with clinical staff for follow-ups or pending actions",
-              "HIPAA Compliance & Confidentiality → Maintaining patient privacy and secure handling of records",
-              "Documentation Accuracy & Completeness → Ensuring notes reflect accurate clinical information",
-              "Adherence to Provider Preferences & Templates → Customizing documentation based on provider style"
+              "Pre-Charting & Chart Setup → Reviewing history, notes, meds, and preparing templates",
+              "Real-Time Scribing & Transcription → Documenting visits and converting audio to notes",
+              "Clinical Note Structuring & Terminology → Accurate HPI, ROS, PE, A&P with proper medical terms",
+              "Active Listening & Information Filtering → Capturing relevant details during encounters",
+              "Chart Completion, Editing & TAT → Finalizing, proofreading, and completing notes on time",
+              "Order Entry & Task Management → Supporting labs, imaging, prescriptions, and EMR tasks",
+              "Care Coordination Support → Communicating follow-ups with clinical team",
+              "HIPAA & Documentation Standards → Ensuring privacy, accuracy, and provider-specific formatting"
             ],
-            columns: ["1", "2", "3", "4"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "scribe_crucial_tasks",
+            id: "scribe_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your Medical Scribe? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
               "Accurate Real-Time Scribing (Live Documentation) → Reduces provider documentation burden during visits",
               "Medical Transcription Accuracy & Turnaround Time → Ensures timely and precise conversion of dictations into billable notes",
@@ -3075,8 +3013,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Medical Terminology & Structured Note Writing → Ensures professional, compliant, and readable documentation",
               "Order Entry & Clinical Task Support → Prevents missed orders and improves workflow",
               "EMR Task & Alert Management → Ensures follow-ups and clinical actions are completed",
-              "Compliance & HIPAA Adherence → Protects patient data and reduces legal risk"
+              "Compliance & HIPAA Adherence → Protects patient data and reduces legal risk",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -3191,59 +3131,46 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       {
         id: "scribe-competencies-skills",
         title: "Part III – Competencies / Skills",
-        description: "What skills or modules would you like to further strengthen based on your professional growth? (Select the areas where additional upskilling would create the most impact.)",
+        description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "scribe_core_skills_upskill",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "Medical Scribe – Core Skills\n(Day-to-day documentation and basic clinical support tasks)",
+            label: "Core Skills",
             options: [
-              "Pre-Charting & Chart Preparation (Reviewing patient history, reason for visit)",
-              "Real-Time Scribing (Live Documentation During Visits)",
-              "Medical Transcription (Audio-to-Text Documentation)",
-              "Basic Medical Terminology & Abbreviations",
-              "Structured Note Writing (HPI, ROS, PE, Assessment & Plan)",
-              "EMR Navigation (Basic Charting, Templates, Note Entry)",
-              "Active Listening & Information Capture",
-              "Documentation Accuracy & Completeness",
-              "Editing & Proofreading Clinical Notes",
-              "Turnaround Time (TAT) Management (Timely note completion)",
-              "HIPAA Compliance & Confidentiality"
+              "Real-Time Charting & Note Accuracy",
+              "Medical Terminology & Anatomy Knowledge",
+              "HPI (History of Present Illness) Documentation",
+              "Review of Systems (ROS) & Physical Exam Entry",
+              "EMR/EHR Navigation & Workflow Efficiency",
+              "HIPAA Compliance & Documentation Standards"
             ],
             required: true,
           },
           {
-            id: "scribe_specialized_skills_upskill",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "Medical Scribe – Specialized Skills (Advanced)\n(Higher-level clinical documentation, workflow ownership, and provider support)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Clinical Documentation (Detailed HPI, Complex Cases, Specialty Notes)",
-              "Provider Preference Adaptation (Customizing notes per provider style)",
-              "Advanced Medical Terminology (Specialty-specific language)",
-              "Clinical Workflow Support (Understanding visit flow, anticipating provider needs)",
-              "Order Entry Support (Labs, Imaging, Prescriptions)",
-              "EMR Task & Inbox Management (Alerts, follow-ups, task queues)",
-              "Care Coordination Support (Communicating with clinical teams for next steps)",
-              "Documentation for Billing Support (Ensuring notes support coding and compliance)",
-              "Quality Assurance & Chart Auditing (Reviewing notes for accuracy and completeness)",
-              "Multi-Provider Support (Handling multiple providers or specialties)",
-              "Time Management & Productivity Optimization (High-volume documentation handling)",
-              "Process Improvement & Workflow Optimization",
-              "Other"
+              "Specialty-Specific Documentation (e.g., Cardiology, Ortho, Derm)",
+              "Coding Support (ICD-10 & CPT Selection Basics)",
+              "Managing Orders (Labs, Imaging, Referrals)",
+              "Patient Education & Discharge Summary Support",
+              "Advanced Clinical Workflow Optimization"
             ],
             required: true,
           }
-        ],
+        ]
       },
       {
         id: "scribe-communication-skills",
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "scribe_comm_proficiency",
+            id: "scribe_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -3256,29 +3183,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "scribe_comm_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for your VA to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "scribe_verbal_comm_importance",
+            id: "scribe_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for your VAs to perform effectively in their role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – VA must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -3289,53 +3201,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "scribe_ai_automation_level",
+            id: "scribe_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "scribe_ai_tool_proficiency",
+            id: "scribe_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "scribe_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "scribe_ai_future_support",
+            id: "scribe_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "scribe_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -3343,61 +3262,30 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
     ],
     "Health Educator": [
       {
-        id: "health-educator-tasks-workflow",
+        id: "educator-tasks-workflow",
         title: "PART II - Tasks and Workflow",
         questions: [
           {
-            id: "health_educator_task_difficulty",
+            id: "educator_task_difficulty",
             type: "grid",
-            label: "How difficult are the following tasks for your Health Educator?",
-            description: "Legend:\n1 – Easy: Can be done with minimal effort or supervision\n2 – Moderate: Requires some focus and occasional guidance\n3 – Difficult: Requires significant effort, expertise, or frequent support\n4 – Very Difficult: High complexity; often leads to errors or requires expert intervention",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Patient Education → Explaining conditions, care plans, medications, and instructions in a clear, patient-friendly manner",
-              "Health Coaching (Lifestyle Support) → Supporting behavior change (diet, exercise, sleep, habits) through structured coaching",
-              "Motivational Support & Patient Engagement → Encouraging adherence, building trust, and improving patient participation",
-              "Follow-Up Calls & Check-Ins → Monitoring patient progress, adherence, and addressing barriers",
-              "Handling Patient Questions & Basic Concerns → Responding within scope and escalating clinical concerns appropriately",
-              "Care Plan Reinforcement → Reviewing and simplifying provider recommendations for patient understanding",
-              "Documentation of Patient Interactions → Recording notes, progress, and updates in EMR/CRM accurately",
-              "Care Coordination (Clinical Team Communication) → Communicating patient updates, risks, or concerns to providers and care teams",
-              "Appointment Coordination → Scheduling follow-ups, coaching sessions, and check-ins",
-              "Program Tracking & Patient Progress Monitoring → Tracking adherence, outcomes, and engagement metrics",
-              "Reporting & Data Updates → Updating dashboards, logs, or reports for program performance",
-              "Health Screening / Intake Support → Assisting with questionnaires or baseline health assessments",
-              "Educational Content Delivery (Resources / Modules) → Sharing structured materials, guides, or program content",
-              "Escalation & Risk Identification → Identifying red flags (non-adherence, worsening symptoms) and escalating appropriately"
+              "Patient Education & Health Coaching → Explaining care plans and supporting lifestyle changes",
+              "Motivational Support & Engagement → Encouraging adherence and building patient trust",
+              "Follow-Ups & Patient Support → Monitoring progress, addressing concerns, escalating when needed",
+              "Care Plan Reinforcement & Documentation → Simplifying recommendations and documenting interactions",
+              "Care Coordination & Appointment Management → Communicating with care team and scheduling follow-ups",
+              "Progress Tracking, Reporting & Intake Support → Monitoring outcomes, updating reports, assisting with screenings",
+              "Education Delivery & Risk Escalation → Sharing resources and identifying/escalating patient risks"
             ],
-            columns: ["1", "2", "3", "4"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "health_educator_time_effort_tasks",
-            type: "grid",
-            label: "Which tasks require the most time and effort from your Health Educator?",
-            description: "Legend:\n1 – Low: Takes very little time (e.g., minutes per day)\n2 – Medium: Requires a steady amount of time (e.g., 1-2 hours per day)\n3 – High: Consumes a large portion of the day (e.g., 3-5 hours per day)\n4 – Very High: The primary focus of the role (e.g., 6+ hours per day)",
-            rows: [
-              "Patient Education",
-              "Health Coaching (Lifestyle Support)",
-              "Motivational Support & Patient Engagement",
-              "Follow-Up Calls & Check-Ins",
-              "Handling Patient Questions & Basic Concerns",
-              "Care Plan Reinforcement",
-              "Documentation of Patient Interactions",
-              "Care Coordination (Clinical Team Communication)",
-              "Appointment Coordination",
-              "Program Tracking & Patient Progress Monitoring",
-              "Reporting & Data Updates",
-              "Health Screening / Intake Support",
-              "Educational Content Delivery (Resources / Modules)",
-              "Escalation & Risk Identification"
-            ],
-            columns: ["1", "2", "3", "4"],
-            required: true,
-          },
-          {
-            id: "health_educator_crucial_tasks",
+            id: "educator_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your Health educator? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
               "Patient Education Delivery (Clear & Effective Communication) → Core driver of patient understanding and program value",
               "Patient Engagement & Follow-Ups → Directly impacts retention, adherence, and outcomes",
@@ -3405,8 +3293,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Documentation Accuracy & Progress Tracking → Ensures continuity of care and program evaluation",
               "Care Plan Reinforcement → Improves adherence to provider recommendations",
               "Coordination with Clinical Team → Prevents gaps in care and improves patient experience",
-              "Program Reporting & Outcome Tracking → Supports business insights and client reporting"
+              "Program Reporting & Outcome Tracking → Supports business insights and client reporting",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -3521,59 +3411,46 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       {
         id: "health-educator-competencies-skills",
         title: "Part III – Competencies / Skills",
-        description: "What skills or modules would you like to further strengthen based on your professional growth? (Select the areas where additional upskilling would create the most impact.)",
+        description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "health_educator_core_skills_upskill",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "Health Educator – Core Skills\n(Day-to-day patient education, engagement, and support tasks)",
+            label: "Core Skills",
             options: [
-              "Patient Education Delivery (Explaining conditions, care plans, instructions clearly)",
-              "Health Coaching Fundamentals (Supporting lifestyle changes: diet, exercise, habits)",
-              "Motivational Support & Patient Engagement (Building trust, encouraging adherence)",
-              "Follow-Up Calls & Patient Check-Ins",
-              "Communication Skills (Empathy, active listening, patient-friendly language)",
-              "Care Plan Reinforcement (Simplifying provider recommendations)",
-              "Documentation of Patient Interactions (Accurate EMR/CRM notes)",
-              "Appointment Coordination (Scheduling sessions and follow-ups)",
-              "Basic Care Coordination (Communicating updates to care team)",
-              "Program Tracking (Monitoring adherence and patient progress)",
-              "HIPAA Compliance & Scope Awareness"
+              "Patient Education & Health Literacy Communication",
+              "Chronic Disease Management Support (Diabetes, Hypertension, etc.)",
+              "Motivational Interviewing & Behavioral Change Coaching",
+              "Creating & Organizing Patient Education Materials",
+              "EMR Documentation & Patient Progress Tracking",
+              "HIPAA Compliance & Patient Privacy"
             ],
             required: true,
           },
           {
-            id: "health_educator_specialized_skills_upskill",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "Health Educator – Specialized Skills (Advanced)\n(Higher-level coaching, clinical coordination, and outcome-driven tasks)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Health Coaching Techniques (Behavior change models, goal-setting strategies)",
-              "Personalized Patient Education (Adapting approach based on condition, readiness, and barriers)",
-              "Chronic Disease Education (e.g., diabetes, hypertension, obesity management)",
-              "Risk Identification & Escalation (Recognizing red flags and escalating appropriately)",
-              "Care Coordination with Clinical Teams (Collaborating with providers, nurses, and specialists)",
-              "Patient Retention & Engagement Strategies (Improving program adherence and reducing drop-offs)",
-              "Data Tracking & Outcome Analysis (Interpreting patient progress, engagement metrics, and trends)",
-              "Reporting & Program Performance Insights (Preparing reports and identifying improvement opportunities)",
-              "Educational Content Delivery & Facilitation (Delivering structured programs, materials, or health modules)",
-              "Handling Complex Patient Interactions (Managing resistant, non-compliant, or emotionally sensitive patients)",
-              "Workflow Optimization & Process Improvement (Improving patient flow, engagement processes, and program efficiency)",
-              "Other"
+              "Specialty-Specific Health Education (e.g., Nutrition, Mental Health)",
+              "Community Resource Coordination & Referrals",
+              "Telehealth Platform Navigation & Virtual Coaching",
+              "Data Tracking & Health Outcome Reporting",
+              "Developing Wellness Programs & Outreach Strategies"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           }
-        ],
+        ]
       },
       {
         id: "health-educator-communication-skills",
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "health_educator_comm_proficiency",
+            id: "health_educator_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -3586,29 +3463,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "health_educator_comm_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for your VA to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "health_educator_verbal_comm_importance",
+            id: "health_educator_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for your VAs to perform effectively in their role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – VA must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -3619,53 +3481,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "health_educator_ai_automation_level",
+            id: "health_educator_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "health_educator_ai_tool_proficiency",
+            id: "health_educator_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "health_educator_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "health_educator_ai_future_support",
+            id: "health_educator_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "health_educator_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -3679,65 +3548,24 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
           {
             id: "dental_receptionist_task_difficulty",
             type: "grid",
-            label: "How difficult are the following tasks for your Dental Receptionist?",
-            description: "Legend:\n1 – Easy: Can be done with minimal effort or supervision\n2 – Moderate: Requires some focus and occasional guidance\n3 – Difficult: Requires significant effort, expertise, or frequent support\n4 – Very Difficult: High complexity; often leads to errors or requires expert intervention",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Appointment Scheduling (New & Existing Patients) → Booking appointments based on procedure type, provider, and time requirements",
-              "Calendar Management & Optimization → Managing provider schedules, avoiding gaps, maximizing productivity",
-              "Appointment Confirmation & Reminders → Confirming appointments and reducing no-shows",
-              "Handling Cancellations & Rescheduling → Backfilling openings and maintaining schedule flow",
-              "Inbound & Outbound Patient Call Handling → Managing inquiries, scheduling, follow-ups, and basic concerns",
-              "Patient Intake & Registration → Collecting and verifying patient demographics and information",
-              "Managing Patient Expectations → Explaining procedures, timelines, and next steps clearly",
-              "Insurance Verification (Dental-Specific) → Checking eligibility, frequencies, limitations, and coverage",
-              "Treatment Plan Coordination → Scheduling recommended procedures and tracking case acceptance",
-              "Pre-Authorizations (if applicable) → Submitting and following up on approvals",
-              "Patient Financial Communication → Explaining OOP costs, estimates, and payment options",
+              "Scheduling, Calendar Optimization & Rescheduling → Managing bookings, provider schedules, and minimizing gaps/no-shows",
+              "Call Handling, Patient Intake & Expectations → Managing calls, registering patients, and explaining next steps",
               "Payment Collection & Posting Support → Collecting copays, balances, and recording payments",
+              "Pre-Authorizations (if applicable) → Submitting and following up on approvals",
               "Basic Ledger Review → Understanding patient balances and transactions",
-              "Patient Chart Review (Medical Alerts, Notes, History) → Ensuring accurate and updated patient information",
-              "Document Management (Uploads, Forms, Consents) → Organizing and maintaining patient records",
-              "Treatment Plan Review & Updates → Reviewing pending and completed procedures",
-              "Coordination with Clinical Team (Dentist, Hygienist, Assistants) → Aligning schedule, procedures, and patient readiness",
-              "Task & Follow-Up Management → Managing recalls, pending treatments, and reminders",
-              "Recall System Management → Tracking hygiene recalls and rebooking patients"
+              "Chart Review & Document Management → Maintaining accurate patient records and treatment updates",
+              "Care Coordination & Follow-Up Management → Aligning with clinical team, managing recalls and pending treatments"
             ],
-            columns: ["1", "2", "3", "4"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "dental_receptionist_time_effort_tasks",
-            type: "grid",
-            label: "Which tasks require the most time and effort from your Dental Receptionist?",
-            description: "Legend:\n1 – Low: Takes very little time (e.g., minutes per day)\n2 – Medium: Requires a steady amount of time (e.g., 1-2 hours per day)\n3 – High: Consumes a large portion of the day (e.g., 3-5 hours per day)\n4 – Very High: The primary focus of the role (e.g., 6+ hours per day)",
-            rows: [
-              "Appointment Scheduling (New & Existing Patients)",
-              "Calendar Management & Optimization",
-              "Appointment Confirmation & Reminders",
-              "Handling Cancellations & Rescheduling",
-              "Inbound & Outbound Patient Call Handling",
-              "Patient Intake & Registration",
-              "Managing Patient Expectations",
-              "Insurance Verification (Dental-Specific)",
-              "Treatment Plan Coordination",
-              "Pre-Authorizations (if applicable)",
-              "Patient Financial Communication",
-              "Payment Collection & Posting Support",
-              "Basic Ledger Review",
-              "Patient Chart Review (Medical Alerts, Notes, History)",
-              "Document Management (Uploads, Forms, Consents)",
-              "Treatment Plan Review & Updates",
-              "Coordination with Clinical Team (Dentist, Hygienist, Assistants)",
-              "Task & Follow-Up Management",
-              "Recall System Management"
-            ],
-            columns: ["1", "2", "3", "4"],
-            required: true,
-          },
-          {
-            id: "dental_receptionist_crucial_tasks",
+            id: "dental_receptionist_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your Dental Receptionist? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
               "Appointment Scheduling & Calendar Optimization → Directly impacts production and provider utilization",
               "Insurance Verification (Accuracy & Completeness) → Prevents billing issues and patient dissatisfaction",
@@ -3746,8 +3574,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Recall Management (Hygiene & Continuing Care) → Ensures recurring revenue and patient retention",
               "Handling Cancellations & Backfilling the Schedule → Minimizes downtime and lost revenue",
               "Patient Intake & Chart Accuracy → Prevents delays and errors during visits",
-              "Payment Collection Support → Improves cash flow and reduces outstanding balances"
+              "Payment Collection Support → Improves cash flow and reduces outstanding balances",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -3862,61 +3692,46 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       {
         id: "dental-receptionist-competencies-skills",
         title: "Part III – Competencies / Skills",
-        description: "What skills or modules would you like to further strengthen based on your professional growth? (Select the areas where additional upskilling would create the most impact.)",
+        description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "dental_receptionist_core_skills_upskill",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "Dental Receptionist – Core Skills\n(Day-to-day front desk execution and patient interaction)",
+            label: "Core Skills",
             options: [
-              "Appointment Scheduling (New & Existing Patients)",
-              "Basic Calendar Management (Provider availability, procedure time matching)",
-              "Dental Terminology knowledge",
-              "Patient Call Handling (Inbound & Outbound)",
-              "Patient Intake & Registration (Demographics, forms, updates)",
-              "Insurance Verification (Basic Eligibility, active coverage check)",
-              "Appointment Confirmation & Reminders",
-              "Patient Communication & Customer Service (Phone, email, text)",
-              "EMR Navigation (Dentrix, Eaglesoft, Open Dental – basic use)",
-              "Chart Review (Alerts, basic treatment history, notes)",
-              "Document Management (Uploading forms, consents, IDs)",
-              "Basic Billing Support (Copays, balances, simple inquiries)",
-              "Recall & Follow-Up Management (Hygiene recalls, missed appointments)"
+              "Professional Call Handling & Patient Communication",
+              "Appointment Scheduling & Calendar Management (Dentrix, Eaglesoft, etc.)",
+              "Managing Cancellations, No-Shows & Same-Day Changes",
+              "Patient Intake & Accurate Data Entry",
+              "Medical/Dental Records Handling & HIPAA Compliance",
+              "Internal Communication & Task Coordination"
             ],
             required: true,
           },
           {
-            id: "dental_receptionist_specialized_skills_upskill",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "Dental Receptionist – Specialized Skills (Advanced)\n(Higher-level coordination, production optimization, and financial communication)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Scheduling & Calendar Optimization (Multi-provider, time blocking, maximizing production)",
-              "Treatment Coordination & Case Acceptance Support (Scheduling recommended procedures and tracking pending treatments)",
-              "Detailed Insurance Verification & Benefits Breakdown (Frequencies, limitations, downgrades, annual maximums)",
-              "Pre-Authorizations & Insurance Coordination (Submissions, follow-ups, and approvals)",
-              "Patient Financial Communication (OOP, Estimates, Payment Plans)",
-              "Handling Complex Calls (Upset Patients, Billing Concerns, Scheduling Conflicts)",
-              "EMR Workflow Management (Task lists, alerts, treatment tracking)",
-              "Ledger Review & Payment Posting Support (Understanding balances, transactions, and patient accounts)",
-              "Coordination with Clinical Team (Aligning procedures, chair time, and patient readiness)",
-              "No-Show & Cancellation Management (Backfilling & Recovery Strategy)",
-              "Workflow Optimization & Process Improvement (Improving scheduling flow, reducing gaps, increasing production)",
-              "Reporting & Performance Tracking (Monitoring schedule gaps, case acceptance, recall effectiveness)",
-              "Other"
+              "Insurance Verification (Eligibility & Benefits Breakdown)",
+              "Patient Financial Communication (Copay, Deductible, OOP Costs)",
+              "Pre-Authorizations & Referral Coordination",
+              "EMR/EHR Navigation & Workflow Efficiency",
+              "Handling Billing Inquiries & Front Desk Support in RCM"
             ],
             required: true,
           }
-        ],
+        ]
       },
       {
         id: "dental-receptionist-communication-skills",
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "dental_receptionist_comm_proficiency",
+            id: "dental_receptionist_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -3929,29 +3744,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "dental_receptionist_comm_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for your VA to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "dental_receptionist_verbal_comm_importance",
+            id: "dental_receptionist_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for your VAs to perform effectively in their role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – VA must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -3962,53 +3762,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "dental_receptionist_ai_automation_level",
+            id: "dental_receptionist_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "dental_receptionist_ai_tool_proficiency",
+            id: "dental_receptionist_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "dental_receptionist_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "dental_receptionist_ai_future_support",
+            id: "dental_receptionist_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "dental_receptionist_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -4022,65 +3829,24 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
           {
             id: "dental_biller_task_difficulty",
             type: "grid",
-            label: "How difficult are the following tasks for your Dental Biller?",
-            description: "Legend:\n1 – Easy: Can be done with minimal effort or supervision\n2 – Moderate: Requires some focus and occasional guidance\n3 – Difficult: Requires significant effort, expertise, or frequent support\n4 – Very Difficult: High complexity; often leads to errors or requires expert intervention",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Insurance Verification (Dental-Specific) → Checking eligibility, frequencies, limitations, waiting periods, and annual maximums",
-              "Treatment Estimate Preparation → Creating accurate estimates based on coverage and patient responsibility",
-              "Pre-Authorizations (if required) → Submitting and tracking prior approvals for major procedures",
-              "Claim Creation & Submission (CDT Codes) → Preparing and submitting clean claims with correct codes and attachments",
-              "Attachment Management (X-rays, Narratives, Periodontal Charting) → Ensuring required documentation is included to prevent denials",
-              "Clearinghouse & Payer Rejection Handling → Identifying and correcting rejected claims before payer processing",
-              "Insurance Payment Posting (EOB/ERA) → Accurately posting insurance payments and adjustments",
-              "Patient Payment Posting → Recording patient payments and updating balances",
-              "Payment Reconciliation → Verifying expected vs. actual reimbursement",
-              "Denial Management & Resolution → Reviewing denied claims, correcting issues, and resubmitting",
-              "Appeals & Resubmissions → Preparing documentation and narratives for reconsideration",
-              "Accounts Receivable (AR) Follow-Up → Following up on unpaid or delayed claims",
-              "Aging Report Management → Prioritizing claims based on aging (30/60/90+ days)",
-              "Patient Billing & Statements → Generating and sending patient statements",
-              "Patient Balance Review & Collections Support → Monitoring balances and assisting with collections",
-              "Coordination with Front Desk (Financial Accuracy) → Ensuring estimates, payments, and ledger entries are aligned",
-              "Billing Reports & KPI Tracking → Monitoring collections, AR, denial trends, and production vs collection",
-              "Audit & Compliance (Coding & Documentation) → Ensuring correct CDT coding and documentation standards",
-              "Workflow Optimization (Reducing Denials & Delays) → Identifying recurring issues and improving processes"
+              "Claim Creation, Submission & Attachments → Submitting clean claims with correct codes and documentation",
+              "Rejection Handling → Fixing clearinghouse/payer rejections before processing",
+              "Payment Posting & Reconciliation → Posting EOB/ERA and patient payments, verifying accuracy",
+              "Denials, Appeals & AR Follow-Up → Resolving denials, resubmitting claims, tracking unpaid balances",
+              "Aging Management → Prioritizing claims based on aging (30/60/90+)",
+              "Patient Billing & Collections Support → Managing statements, balances, and front desk coordination",
+              "Reporting, Compliance & Process Improvement → Tracking KPIs, ensuring coding accuracy, reducing denials"
             ],
-            columns: ["1", "2", "3", "4"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "dental_biller_time_effort_tasks",
-            type: "grid",
-            label: "Which tasks require the most time and effort from your Dental Biller?",
-            description: "Legend:\n1 – Low: Takes very little time (e.g., minutes per day)\n2 – Medium: Requires a steady amount of time (e.g., 1-2 hours per day)\n3 – High: Consumes a large portion of the day (e.g., 3-5 hours per day)\n4 – Very High: The primary focus of the role (e.g., 6+ hours per day)",
-            rows: [
-              "Insurance Verification (Dental-Specific)",
-              "Treatment Estimate Preparation",
-              "Pre-Authorizations (if required)",
-              "Claim Creation & Submission (CDT Codes)",
-              "Attachment Management (X-rays, Narratives, Periodontal Charting)",
-              "Clearinghouse & Payer Rejection Handling",
-              "Insurance Payment Posting (EOB/ERA)",
-              "Patient Payment Posting",
-              "Payment Reconciliation",
-              "Denial Management & Resolution",
-              "Appeals & Resubmissions",
-              "Accounts Receivable (AR) Follow-Up",
-              "Aging Report Management",
-              "Patient Billing & Statements",
-              "Patient Balance Review & Collections Support",
-              "Coordination with Front Desk (Financial Accuracy)",
-              "Billing Reports & KPI Tracking",
-              "Audit & Compliance (Coding & Documentation)",
-              "Workflow Optimization (Reducing Denials & Delays)"
-            ],
-            columns: ["1", "2", "3", "4"],
-            required: true,
-          },
-          {
-            id: "dental_biller_crucial_tasks",
+            id: "dental_biller_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your Dental Biller? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
               "Claim Submission Accuracy (Clean Claims with Attachments) → Directly impacts approval rate and reimbursement speed",
               "Denial Management & Resolution → Recovers lost revenue and reduces write-offs",
@@ -4089,8 +3855,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Payment Posting Accuracy (Insurance & Patient) → Ensures financial accuracy and reporting integrity",
               "Attachment Management (X-rays, Narratives) → Critical for approval of major procedures",
               "Appeals & Resubmissions → Recovers high-value denied claims",
-              "Patient Billing & Collections Support → Improves cash flow and reduces outstanding balances"
+              "Patient Billing & Collections Support → Improves cash flow and reduces outstanding balances",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -4255,10 +4023,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "dental_biller_comm_proficiency",
+            id: "dental_biller_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -4271,29 +4039,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "dental_biller_comm_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for your VA to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "dental_biller_verbal_comm_importance",
+            id: "dental_biller_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for your VAs to perform effectively in their role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – VA must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -4304,53 +4057,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "dental_biller_ai_automation_level",
+            id: "dental_biller_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "dental_biller_ai_tool_proficiency",
+            id: "dental_biller_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "dental_biller_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "dental_biller_ai_future_support",
+            id: "dental_biller_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "dental_biller_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -4364,61 +4124,25 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
           {
             id: "ea_task_difficulty",
             type: "grid",
-            label: "How difficult are the following tasks for your Executive Assistant?",
-            description: "Legend:\n1 – Easy: Can be done with minimal effort or supervision\n2 – Moderate: Requires some focus and occasional guidance\n3 – Difficult: Requires significant effort, expertise, or frequent support\n4 – Very Difficult: High complexity; often leads to errors or requires expert intervention",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Calendar Management & Scheduling → Managing executive calendar, meetings, appointments, and priorities",
-              "Meeting Coordination (Internal & External) → Scheduling across multiple stakeholders, time zones, and availability",
-              "Conflict Resolution & Priority Management → Handling overlaps, reschedules, and prioritizing high-impact meetings",
-              "Email & Inbox Management → Organizing inbox, drafting replies, prioritizing messages, flagging urgent items",
-              "Client & Stakeholder Communication → Communicating professionally with clients, partners, and internal teams",
-              "Drafting & Preparing Communications → Writing emails, announcements, and responses on behalf of the executive",
-              "Document Preparation & Management → Creating reports, presentations, and maintaining organized files",
-              "Meeting Notes & Minutes (Documentation) → Capturing key discussion points, action items, and follow-ups",
-              "Data Entry & Record Management → Maintaining accurate records, trackers, and databases",
-              "Task Tracking & Follow-Up Management → Monitoring action items, deadlines, and deliverables",
-              "Project Coordination Support → Assisting in managing projects, timelines, and stakeholder updates",
-              "Cross-Functional Coordination → Working with different teams to ensure alignment and execution",
-              "Reporting & Dashboard Updates → Preparing reports, tracking KPIs, and summarizing data",
-              "Executive Brief Preparation → Summarizing key updates, priorities, and action points",
-              "Research & Information Gathering → Conducting research to support decision-making",
-              "Travel Planning & Coordination → Booking flights, accommodations, and preparing itineraries",
-              "Event & Meeting Logistics → Organizing meetings, events, and coordination details"
+              "Calendar & Priority Management → Managing executive calendar, meetings, and resolving conflicts",
+              "Email & Inbox Management → Organizing inbox, drafting replies, and prioritizing messages",
+              "Client & Stakeholder Communication → Professional communication with clients and internal teams",
+              "Document Preparation & Management → Creating reports, presentations, and maintaining files",
+              "Meeting Support & Documentation → Capturing notes, minutes, and action items",
+              "Task Tracking & Follow-Up Management → Monitoring deadlines, deliverables, and projects",
+              "Executive Briefing & Reporting → Summarizing key updates and conducting research",
+              "Logistics & Travel Coordination → Planning travel, events, and meeting logistics"
             ],
-            columns: ["1", "2", "3", "4"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "ea_time_effort_tasks",
-            type: "grid",
-            label: "Which tasks require the most time and effort from your Executive Assistant?",
-            description: "Legend:\n1 – Low: Takes very little time (e.g., minutes per day)\n2 – Medium: Requires a steady amount of time (e.g., 1-2 hours per day)\n3 – High: Consumes a large portion of the day (e.g., 3-5 hours per day)\n4 – Very High: The primary focus of the role (e.g., 6+ hours per day)",
-            rows: [
-              "Calendar Management & Scheduling",
-              "Meeting Coordination (Internal & External)",
-              "Conflict Resolution & Priority Management",
-              "Email & Inbox Management",
-              "Client & Stakeholder Communication",
-              "Drafting & Preparing Communications",
-              "Document Preparation & Management",
-              "Meeting Notes & Minutes (Documentation)",
-              "Data Entry & Record Management",
-              "Task Tracking & Follow-Up Management",
-              "Project Coordination Support",
-              "Cross-Functional Coordination",
-              "Reporting & Dashboard Updates",
-              "Executive Brief Preparation",
-              "Research & Information Gathering",
-              "Travel Planning & Coordination",
-              "Event & Meeting Logistics"
-            ],
-            columns: ["1", "2", "3", "4"],
-            required: true,
-          },
-          {
-            id: "ea_crucial_tasks",
+            id: "ea_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your Executive Assistant? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
               "Calendar & Priority Management → Directly impacts executive productivity and time utilization",
               "Inbox & Communication Management → Ensures timely responses and effective communication flow",
@@ -4426,8 +4150,10 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
               "Meeting Coordination & Preparation → Keeps operations organized and efficient",
               "Executive Briefing & Reporting → Supports decision-making with clear insights",
               "Cross-Functional Coordination → Ensures alignment across teams and projects",
-              "Document & Information Management → Maintains organization and accessibility of key information"
+              "Document & Information Management → Maintains organization and accessibility of key information",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -4544,61 +4270,46 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       {
         id: "ea-competencies-skills",
         title: "Part III – Competencies / Skills",
-        description: "What skills or modules would you like to further strengthen based on your professional growth? (Select the areas where additional upskilling would create the most impact.)",
+        description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "ea_core_skills_upskill",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "Executive Assistant – Core Skills\n(Day-to-day administrative execution and executive support)",
+            label: "Core Skills",
             options: [
-              "Calendar Management & Scheduling (Meetings, appointments, priorities)",
-              "Email & Inbox Management (Organizing, prioritizing, drafting replies)",
-              "Basic Client & Stakeholder Communication",
-              "Meeting Coordination (Scheduling, confirmations, logistics)",
-              "Task Tracking & Follow-Up Management",
-              "Data Entry & Record Management",
-              "Document Management (Files, folders, organization)",
-              "Basic Report Preparation (Simple summaries, trackers)",
-              "Note-Taking & Meeting Minutes",
-              "Time Management & Organization Skills",
-              "Communication Skills (Written & Verbal Professionalism)",
-              "Other"
+              "Inbox & Email Management (Prioritization & Response)",
+              "Complex Calendar Management & Meeting Coordination",
+              "Travel Planning & Logistics Management",
+              "Document Preparation & Presentation Support",
+              "Task Tracking & Project Coordination",
+              "Professional Communication & Stakeholder Management"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           },
           {
-            id: "ea_specialized_skills_upskill",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "Executive Assistant – Specialized Skills (Advanced)\n(Higher-level executive support, coordination, and decision-enabling tasks)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Calendar & Priority Management → Managing competing priorities, high-level scheduling, time blocking",
-              "Inbox Optimization & Communication Ownership → Drafting on behalf of executive, filtering priorities, handling sensitive communication",
-              "Executive Briefing & Decision Support → Preparing summaries, insights, and key updates for decision-making",
-              "Project Coordination & Management Support → Managing timelines, stakeholders, and deliverables",
-              "Cross-Functional Coordination → Working across teams to ensure alignment and execution",
-              "Advanced Reporting & Data Analysis → Creating reports, dashboards, and interpreting key metrics",
-              "Research & Information Synthesis → Gathering and summarizing information for strategic use",
-              "Travel & Event Planning (End-to-End Coordination) → Managing logistics, itineraries, and contingencies",
-              "Process Improvement & Workflow Optimization → Identifying inefficiencies and improving systems/processes",
-              "Confidentiality & Executive-Level Discretion → Handling sensitive information professionally",
-              "Stakeholder Management → Communicating with clients, partners, and leadership effectively",
-              "Other"
+              "Executive Reporting & Data Summarization",
+              "Event Planning & Coordination",
+              "Social Media Management & Personal Branding Support",
+              "Basic Financial Tracking & Expense Management",
+              "Workflow Automation & Process Optimization"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           }
-        ],
+        ]
       },
       {
         id: "ea-communication-skills",
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "ea_comm_proficiency",
+            id: "ea_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -4611,29 +4322,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "ea_comm_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for your VA to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "ea_verbal_comm_importance",
+            id: "ea_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for your VAs to perform effectively in their role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – VA must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -4644,53 +4340,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "ea_ai_automation_level",
+            id: "ea_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "ea_ai_tool_proficiency",
+            id: "ea_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "ea_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "ea_ai_future_support",
+            id: "ea_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "ea_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
@@ -4698,76 +4401,41 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
     ],
     "General Business VA": [
       {
-        id: "gb-tasks-workflow",
+        id: "business-tasks-workflow",
         title: "PART II - Tasks and Workflow",
         questions: [
           {
-            id: "gb_task_difficulty",
+            id: "business_task_difficulty",
             type: "grid",
-            label: "How difficult are the following tasks for your General Business VA?",
-            description: "Legend:\n1 – Easy: Can be done with minimal effort or supervision\n2 – Moderate: Requires some focus and occasional guidance\n3 – Difficult: Requires significant effort, expertise, or frequent support\n4 – Very Difficult: High complexity; often leads to errors or requires expert intervention",
+            label: "How easy or difficult is it for you to complete the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
-              "Calendar Management & Scheduling → Managing executive calendar, meetings, appointments, and priorities",
-              "Meeting Coordination (Internal & External) → Scheduling across multiple stakeholders, time zones, and availability",
-              "Conflict Resolution & Priority Management → Handling overlaps, reschedules, and prioritizing high-impact meetings",
-              "Email & Inbox Management → Organizing inbox, drafting replies, prioritizing messages, flagging urgent items",
-              "Client & Stakeholder Communication → Communicating professionally with clients, partners, and internal teams",
-              "Drafting & Preparing Communications → Writing emails, announcements, and responses on behalf of the executive",
-              "Document Preparation & Management → Creating reports, presentations, and maintaining organized files",
-              "Meeting Notes & Minutes (Documentation) → Capturing key discussion points, action items, and follow-ups",
-              "Data Entry & Record Management → Maintaining accurate records, trackers, and databases",
-              "Task Tracking & Follow-Up Management → Monitoring action items, deadlines, and deliverables",
-              "Project Coordination Support → Assisting in managing projects, timelines, and stakeholder updates",
-              "Cross-Functional Coordination → Working with different teams to ensure alignment and execution",
-              "Reporting & Dashboard Updates → Preparing reports, tracking KPIs, and summarizing data",
-              "Executive Brief Preparation → Summarizing key updates, priorities, and action points",
-              "Research & Information Gathering → Conducting research to support decision-making",
-              "Travel Planning & Coordination → Booking flights, accommodations, and preparing itineraries",
-              "Event & Meeting Logistics → Organizing meetings, events, and coordination details"
+              "Lead Generation, CRM & Outreach → Sourcing leads, managing pipeline, and conducting outreach/follow-ups",
+              "Social Media, Content & Email Marketing → Managing posts, campaigns, and basic performance tracking",
+              "Order, Inventory & Vendor Coordination → Managing orders, stock, and supplier communication",
+              "Inbox, Calendar & Data Management → Handling emails, scheduling, records, and documentation",
+              "Customer Communication & Issue Handling → Responding to inquiries, resolving concerns, escalating when needed",
+              "Task Tracking, Reporting & Workflow Coordination → Monitoring tasks, updating dashboards, and ensuring process flow"
             ],
-            columns: ["1", "2", "3", "4"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "gb_time_effort_tasks",
-            type: "grid",
-            label: "Which tasks require the most time and effort from your General Business VA?",
-            description: "Legend:\n1 – Low: Takes very little time (e.g., minutes per day)\n2 – Medium: Requires a steady amount of time (e.g., 1-2 hours per day)\n3 – High: Consumes a large portion of the day (e.g., 3-5 hours per day)\n4 – Very High: The primary focus of the role (e.g., 6+ hours per day)",
-            rows: [
-              "Calendar Management & Scheduling",
-              "Meeting Coordination (Internal & External)",
-              "Conflict Resolution & Priority Management",
-              "Email & Inbox Management",
-              "Client & Stakeholder Communication",
-              "Drafting & Preparing Communications",
-              "Document Preparation & Management",
-              "Meeting Notes & Minutes (Documentation)",
-              "Data Entry & Record Management",
-              "Task Tracking & Follow-Up Management",
-              "Project Coordination Support",
-              "Cross-Functional Coordination",
-              "Reporting & Dashboard Updates",
-              "Executive Brief Preparation",
-              "Research & Information Gathering",
-              "Travel Planning & Coordination",
-              "Event & Meeting Logistics"
-            ],
-            columns: ["1", "2", "3", "4"],
-            required: true,
-          },
-          {
-            id: "gb_crucial_tasks",
+            id: "business_time_consuming_tasks",
             type: "checkbox",
-            label: "What are the most crucial, business impacting tasks for your General Business VA? (Select up to 3)",
+            label: "Which tasks take the most time or effort in your workflow? (Select up to 3)",
             options: [
-              "Calendar & Priority Management → Directly impacts executive productivity and time utilization",
-              "Inbox & Communication Management → Ensures timely responses and effective communication flow",
-              "Task Tracking & Follow-Up Management → Prevents missed deadlines and ensures execution",
-              "Meeting Coordination & Preparation → Keeps operations organized and efficient",
-              "Executive Briefing & Reporting → Supports decision-making with clear insights",
-              "Cross-Functional Coordination → Ensures alignment across teams and projects",
-              "Document & Information Management → Maintains organization and accessibility of key information"
+              "Lead Generation & Sales Follow-Ups → Directly impacts revenue and pipeline growth",
+              "CRM Management & Pipeline Tracking → Ensures visibility and conversion of leads",
+              "Customer Support & Client Communication → Drives customer satisfaction and retention",
+              "Order Processing & Operations Coordination → Ensures smooth business operations and delivery",
+              "Email & Inbox Management → Maintains communication flow and responsiveness",
+              "Marketing Support & Lead Generation Activities → Supports brand growth and demand generation",
+              "Task Tracking & Follow-Up Management → Ensures execution and prevents missed opportunities",
+              "Reporting & Performance Tracking → Supports data-driven decisions",
+              "Other"
             ],
+            optionsWithInputs: ["Other"],
             maxSelections: 3,
             required: true,
           },
@@ -4884,61 +4552,46 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
       {
         id: "gb-competencies-skills",
         title: "Part III – Competencies / Skills",
-        description: "What skills or modules would you like to further strengthen based on your professional growth? (Select the areas where additional upskilling would create the most impact.)",
+        description: "Which skills or topics would help you perform your role more effectively if you received additional training? (Select the areas where you feel additional support or learning would help you the most.)",
         questions: [
           {
-            id: "gb_core_skills_upskill",
+            id: "competencies_skills",
             type: "checkbox",
-            label: "General Business VA – Core Skills\n(Day-to-day administrative execution and business support)",
+            label: "Core Skills",
             options: [
-              "Calendar Management & Scheduling (Meetings, appointments, priorities)",
-              "Email & Inbox Management (Organizing, prioritizing, drafting replies)",
-              "Basic Client & Stakeholder Communication",
-              "Meeting Coordination (Scheduling, confirmations, logistics)",
-              "Task Tracking & Follow-Up Management",
-              "Data Entry & Record Management",
-              "Document Management (Files, folders, organization)",
-              "Basic Report Preparation (Simple summaries, trackers)",
-              "Note-Taking & Meeting Minutes",
-              "Time Management & Organization Skills",
-              "Communication Skills (Written & Verbal Professionalism)",
-              "Other"
+              "General Administrative Support & Data Entry",
+              "Customer Service & Inquiry Handling (Email/Chat)",
+              "Basic Social Media Management & Posting",
+              "Research & Information Organization",
+              "Task Management & Daily Reporting",
+              "Professional Communication & Team Collaboration"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           },
           {
-            id: "gb_specialized_skills_upskill",
+            id: "specialized_skills",
             type: "checkbox",
-            label: "General Business VA – Specialized Skills (Advanced)\n(Higher-level business support, coordination, and decision-enabling tasks)",
+            label: "Specialized Skills",
             options: [
-              "Advanced Calendar & Priority Management → Managing competing priorities, high-level scheduling, time blocking",
-              "Inbox Optimization & Communication Ownership → Drafting on behalf of executive, filtering priorities, handling sensitive communication",
-              "Executive Briefing & Decision Support → Preparing summaries, insights, and key updates for decision-making",
-              "Project Coordination & Management Support → Managing timelines, stakeholders, and deliverables",
-              "Cross-Functional Coordination → Working across teams to ensure alignment and execution",
-              "Advanced Reporting & Data Analysis → Creating reports, dashboards, and interpreting key metrics",
-              "Research & Information Synthesis → Gathering and summarizing information for strategic use",
-              "Travel & Event Planning (End-to-End Coordination) → Managing logistics, itineraries, and contingencies",
-              "Process Improvement & Workflow Optimization → Identifying inefficiencies and improving systems/processes",
-              "Confidentiality & Executive-Level Discretion → Handling sensitive information professionally",
-              "Stakeholder Management → Communicating with clients, partners, and leadership effectively",
-              "Other"
+              "Lead Generation & Basic CRM Management",
+              "Content Creation & Basic Graphic Design (Canva, etc.)",
+              "Email Marketing & Newsletter Support",
+              "E-commerce Support (Order Processing, Product Listing)",
+              "Basic Bookkeeping & Invoice Management"
             ],
-            optionsWithInputs: ["Other"],
             required: true,
           }
-        ],
+        ]
       },
       {
         id: "gb-communication-skills",
         title: "Part IV - Communication Skills",
         questions: [
           {
-            id: "gb_comm_proficiency",
+            id: "gb_comm_difficulty",
             type: "grid",
-            label: "Rate the overall proficiency of your VA in the following communication areas:",
-            description: "Legend:\nNA – Not applicable/not part of job\n1 – Basic: Minimal knowledge; requires close guidance.\n2 – Developing: Partial understanding; needs occasional support.\n3 – Proficient: Performs tasks independently; meets expectations.\n4 – Advanced: Demonstrates strong mastery; handles complex tasks independently.",
+            label: "How easy or difficult is it for you to perform the following tasks in your role?",
+            description: "Legend:\nNA – Not Applicable / Not part of my role\n1 – Very Difficult – I often struggle and need help\n2 – Difficult – I can do it but sometimes need support\n3 – Manageable – I can perform the task independently\n4 – Easy – I can perform the task quickly and confidently",
             rows: [
               "Handling client calls → Communicating clearly, professionally, and confidently during calls",
               "Responding to client emails/messages → Providing timely, accurate, and well-written responses",
@@ -4951,29 +4604,14 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
             required: true,
           },
           {
-            id: "gb_comm_essentiality",
-            type: "grid",
-            label: "For each task, indicate how essential it is for your VA to perform it correctly:",
-            description: "Legend:\nCritical – Cannot deploy without this skill\nImportant – Deployment possible, but gaps must be addressed quickly\nOptional – Can deploy even if skill is weak; can upskill later",
-            rows: [
-              "Handling client calls → Clear and professional verbal communication",
-              "Responding to client emails/messages → Timely and accurate written communication",
-              "Posting updates on group chats / team channels → Effective team communication and coordination",
-              "Preparing and submitting reports → Clear reporting and information sharing",
-              "Managing appointment scheduling & changes → Accurate coordination of schedules and expectations",
-              "Updating documentation & records accurately → Reliable and clear documentation for workflow continuity"
-            ],
-            columns: ["Critical", "Important", "Optional"],
-            required: true,
-          },
-          {
-            id: "gb_verbal_comm_importance",
+            id: "gb_speaking_confidence",
             type: "radio",
-            label: "How important is clear verbal communication (including accent clarity) for your VAs to perform effectively in their role? (select one)",
+            label: "How confident are you that clients or patients clearly understand you when you speak?",
             options: [
-              "Very important – VA must be easily understandable to clients and/or patients; thick accent could affect performance",
-              "Important – Minor accent is acceptable as long as clients/patients understand",
-              "Nice to have – Verbal communication skills is not critical for effective performance"
+              "Very confident – I am easily understood",
+              "Confident – Minor repetition may sometimes be needed",
+              "Somewhat confident – I occasionally worry about accent or clarity",
+              "Not confident – I often feel misunderstood"
             ],
             required: true,
           }
@@ -4984,53 +4622,60 @@ export const CLIENT_SURVEY_SCHEMA: ClientSurveySchema = {
         title: "Part V - AI Essentials",
         questions: [
           {
-            id: "gb_ai_automation_level",
+            id: "gb_ai_usage",
             type: "radio",
-            label: "How much of your current process is automated with AI?",
+            label: "How much of your current workflow involves the use of AI tools?",
             options: [
-              "None – fully manual",
-              "Partially – AI assists but VAs still do most work",
-              "Mostly – AI handles majority of tasks, VA oversight only",
-              "Fully automated"
+              "None – My work is mostly manual",
+              "A little – I occasionally use AI to assist with tasks",
+              "Moderate – AI helps with several parts of my workflow",
+              "A lot – AI is integrated into many of my tasks"
             ],
             required: true,
           },
           {
-            id: "gb_ai_tool_proficiency",
+            id: "gb_ai_tool_comfort",
             type: "grid",
-            label: "For each AI tool below, how proficient would you like your VA to be in using it?",
-            description: "Legend:\nBasic – Can follow instructions and use AI with guidance\nIntermediate – Can use AI to assist tasks and improve efficiency\nAdvanced – Can leverage AI independently to optimize work",
+            label: "How comfortable are you using the following AI tools in your work?",
+            description: "Legend\nNA – Not applicable / I do not use this\n1 – Not comfortable – I need guidance to use it\n2 – Somewhat comfortable – I can use it with occasional help\n3 – Comfortable – I can use it independently\n4 – Very comfortable – I can use it efficiently and creatively",
             rows: [
               "Generative AI (e.g., ChatGPT, Claude, Gemini)",
               "Healthcare-specific AI / EMR systems (e.g., Dentrix, Epic, Athenahealth)",
               "Data analysis & reporting tools with AI (e.g., Excel / Sheets AI features, dashboards)",
               "Task & workflow automation AI (e.g., scheduling bots, reminders)"
             ],
-            columns: ["Basic", "Intermediate", "Advanced"],
+            columns: ["NA", "1", "2", "3", "4"],
             required: true,
           },
           {
-            id: "gb_ai_importance",
-            type: "radio",
-            label: "How important is AI proficiency for your VA to perform effectively in their role?",
-            options: [
-              "Critical – AI skills are essential for success in daily tasks",
-              "Important – AI skills help VAs work more efficiently, but can be learned on the job",
-              "Optional – AI skills are a nice-to-have, not required for effective performance"
-            ],
-            required: true,
-          },
-          {
-            id: "gb_ai_future_support",
+            id: "gb_ai_usage_areas",
             type: "checkbox",
-            label: "How do you see AI supporting your VA’s role in the next 6–12 months? (select all that apply)",
+            label: "In which areas do you currently use AI the most? (Select all that apply)",
             options: [
-              "AI will assist in some tasks, VAs still oversee critical work",
-              "AI will handle routine tasks, VAs focus on decision-making / client interaction",
-              "AI may take on more of the workflow, but VAs remain essential",
-              "Will stay manual; tasks will continue to be done primarily by VAs",
-              "Not sure / still evaluating AI adoption"
+              "Writing or drafting emails/messages",
+              "Summarizing notes or documentation",
+              "Research or information lookup",
+              "Data analysis or reporting",
+              "Task automation or workflow support",
+              "Organizing information or documentation",
+              "I currently do not use AI tools"
             ],
+            required: true,
+          },
+          {
+            id: "gb_ai_skills_to_learn",
+            type: "checkbox",
+            label: "What AI-related skills would you like to learn to improve your work?",
+            options: [
+              "Writing emails or messages faster with AI",
+              "Summarizing patient/client notes",
+              "Automating repetitive tasks",
+              "Creating reports using AI tools",
+              "Workflow automation",
+              "Prompt writing / prompting techniques",
+              "Other"
+            ],
+            optionsWithInputs: ["Other"],
             required: true,
           }
         ],
